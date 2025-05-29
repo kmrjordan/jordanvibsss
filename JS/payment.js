@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
       total += item.price * item.quantity;
     });
 
-    const formattedTotal = `$${total.toFixed(2)}`;
+    const formattedTotal = `₹${total.toFixed(2)}`;
     const amountInput = document.getElementById('amount');
     if (amountInput) {
       amountInput.value = formattedTotal;

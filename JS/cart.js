@@ -315,7 +315,7 @@ function renderCartItems() {
 
   if (cart.length === 0) {
     container.innerHTML = '<p class="text-gray-600 text-center">Your cart is empty.</p>';
-    totalPriceElem.textContent = '$0.00';
+    totalPriceElem.textContent = '₹0.00';
     if (paymentButton) paymentButton.classList.add('hidden');
     return;
   }
