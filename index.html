@@ -7,52 +7,53 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="../CSS/home.css" />
   <script src="./JS/cart.js" defer></script>
-
+  <script src="./JS/index.js" defer></script>
+  <link rel="stylesheet" href="./CSS/index.css" />
   <!-- AOS CSS for scroll animations -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 </head>
 <body class="bg-gray-50 text-gray-800 flex flex-col min-h-screen">
+<!-- Full Header with Video Background -->
+<header class="relative h-screen w-full overflow-hidden">
+  <!-- Video Background -->
+  <video autoplay muted loop playsinline class="absolute top-0 left-0 w-full h-full object-cover z-0">
+    <source src="./media/a76e491cfee880ae3f1a1a16bfc982d6.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
 
-  <!-- Header -->
-  <header class="bg-white shadow-md sticky top-0 z-50">
-    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+  <!-- Overlay Content (Navigation + Hero Text) -->
+  <div class="relative z-10 w-full h-full bg-black bg-opacity-50">
+    <!-- Navigation -->
+    <div class="max-w-7xl mx-auto px-4 py-6 flex justify-between items-center">
       <h1 class="text-4xl font-extrabold bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 text-transparent bg-clip-text animate-pulse tracking-widest font-poppins">
-        VD
+        V
       </h1>
-      <nav class="space-x-4 flex items-center">
-        <a href="index.html" class="hover:text-indigo-500">Home</a>
-        <a href="./HTML/shop.html" class="hover:text-indigo-500">Shop</a>
-        <a href="./HTML/about.html" class="hover:text-indigo-500">About</a>
-        <a href="./HTML/contact.html" class="hover:text-indigo-500">Contact</a>
-        <a href="./HTML/cart.html" class="hover:text-indigo-500 relative">
+      <nav class="space-x-4 flex items-center text-white">
+        <a href="index.html" class="hover:text-indigo-300">Home</a>
+        <a href="./HTML/shop.html" class="hover:text-indigo-300">Shop</a>
+        <a href="./HTML/about.html" class="hover:text-indigo-300">About</a>
+        <a href="./HTML/contact.html" class="hover:text-indigo-300">Contact</a>
+        <a href="./HTML/cart.html" class="hover:text-indigo-300 relative">
           Cart 🛒
           <span id="cart-count" class="absolute -top-2 -right-3 bg-red-600 text-white rounded-full px-2 text-xs font-bold">0</span>
         </a>
       </nav>
     </div>
-  </header>
+
+    <!-- Optional Hero Text -->
+    <div class="flex flex-col justify-center items-center text-center text-white h-[calc(100%-72px)] px-4">
+      <h2 class="text-[160px] font-extrabold text-transparent bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 bg-clip-text drop-shadow-lg animate-pulse mb-4">
+        V
+      </h2>
+      
+      <p class="text-lg md:text-2xl max-w-2xl">Discover our latest collections — stylish, bold, and made for you.</p>
+    </div>
+  </div>
+</header>
+
+
 
   <main class="flex-grow bg-white p-8 rounded-lg shadow-md py-16 px-4 w-full max-w-7xl mx-auto">
-    <!-- Hero Section -->
-    <section class="relative h-[500px] overflow-hidden">
-      <!-- Video Background -->
-      <video autoplay muted loop playsinline class="absolute top-0 left-0 w-full h-full object-cover z-0">
-        <source src="./media/a76e491cfee880ae3f1a1a16bfc982d6.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-
-      <!-- Dark Overlay -->
-      <div class="absolute inset-0 bg-black bg-opacity-50 z-10"></div>
-
-      <!-- Hero Text -->
-      <div class="relative z-20 flex flex-col items-center justify-center h-full text-center text-white px-4">
-        <h2 class="text-4xl font-bold mb-4">Your Favorite Products, Delivered Fast</h2>
-        <p class="text-lg mb-6">Browse thousands of top-quality items at the best prices.</p>
-        <a href="shop.html" class="bg-indigo-600 text-white px-6 py-3 rounded-lg hover:bg-indigo-700 transition">
-          Shop Now
-        </a>
-      </div>
-    </section>
 
     <!-- Featured Products -->
     <section class="py-12">
@@ -180,10 +181,106 @@
         </blockquote>
       </div>
     </section>
+    <!-- Visual Experience Section with Background Images -->
+<section class="py-16" data-aos="fade-up">
+  <h3 class="text-3xl font-bold mb-12 text-center text-black">Showcase</h3>
+
+  <!-- Background Image Cards -->
+  <div class="space-y-10">
+    <!-- Card 1 -->
+    <div
+    class="relative h-72 rounded-xl overflow-hidden shadow-lg"
+    style="background-image: url('./media/Mysterious\ Eye\ in\ Darkness\ _\ Dramatic\ Portrait\ Photography.jpeg'); background-size: cover; background-position: center;"
+    data-aos="fade-up"
+  >
+    <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+      <h4 class="text-white text-2xl md:text-3xl font-semibold">Discover Elegant Styles</h4>
+    </div>
+  </div>
+
+    <!-- Card 2 -->
+    <!-- Card 2 with Background Video -->
+<div
+class="relative h-72 rounded-xl overflow-hidden shadow-lg"
+data-aos="fade-up"
+data-aos-delay="100"
+>
+<!-- Video Background -->
+<video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover z-0">
+  <source src="./media/fc01103ac9bc25e6ebc1ef8935974d50.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+<!-- Dark Overlay and Text -->
+<div class="absolute inset-0 bg-black bg-opacity-40 z-10 flex items-center justify-center">
+  <h4 class="text-white text-2xl md:text-3xl font-semibold z-20">Trendy & Timeless Collections</h4>
+</div>
+</div>
+    <!-- Card 3 -->
+    
+<div
+class="relative h-72 rounded-xl overflow-hidden shadow-lg"
+data-aos="fade-up"
+data-aos-delay="100"
+>
+<!-- Video Background -->
+<video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover z-0">
+  <source src="./media/0515_OnePlus13s_Horizontal.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+<!-- Dark Overlay and Text -->
+<div class="absolute inset-0 bg-black bg-opacity-40 z-10 flex items-center justify-center">
+  <h4 class="text-white text-2xl md:text-3xl font-semibold z-20">Unbeatable Electronics Deals</h4>
+</div>
+</div>
+  </div>
+</section>
+
+<!-- Animated Image Gallery with Parallax Cursor Animation -->
+<section class="py-16 px-4 max-w-7xl mx-auto" data-aos="fade-up">
+  <h3 class="text-3xl font-bold mb-8 text-center text-black">Our Gallery</h3>
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+    
+    <!-- Image 1 -->
+    <div class="relative group overflow-hidden rounded-lg shadow-lg h-60" data-aos="fade-up" onmousemove="handleParallax(event)" onmouseleave="resetParallax(event)">
+      <img src="./media/_ (7).jpeg" alt="Fashion Background" class="parallax-img absolute inset-0 w-full h-full object-cover transition-transform duration-200 ease-out" />
+    </div>
+
+    <!-- Image 2 -->
+    <div class="relative group overflow-hidden rounded-lg shadow-lg h-60" data-aos="fade-up" data-aos-delay="100" onmousemove="handleParallax(event)" onmouseleave="resetParallax(event)">
+      <img src="./media/Men's Casual Blazer Jacket With Front Button, Long Sleeve, Pocket, Notched Collar, Minimalist Design.jpeg" alt="Stylish Product" class="parallax-img absolute inset-0 w-full h-full object-cover transition-transform duration-200 ease-out" />
+    </div>
+
+    <!-- Image 3 -->
+    <div class="relative group overflow-hidden rounded-lg shadow-lg h-60" data-aos="fade-up" data-aos-delay="200" onmousemove="handleParallax(event)" onmouseleave="resetParallax(event)">
+      <img src="./media/_ (8).jpeg" alt="Trendy Collection" class="parallax-img absolute inset-0 w-full h-full object-cover transition-transform duration-200 ease-out" />
+    </div>
+
+    <!-- Image 4 -->
+    <div class="relative group overflow-hidden rounded-lg shadow-lg h-60" data-aos="fade-up" onmousemove="handleParallax(event)" onmouseleave="resetParallax(event)">
+      <img src="./media/_ (9).jpeg" alt="Elegant Fashion" class="parallax-img absolute inset-0 w-full h-full object-cover transition-transform duration-200 ease-out" />
+    </div>
+
+    <!-- Image 5 -->
+    <div class="relative group overflow-hidden rounded-lg shadow-lg h-60" data-aos="fade-up" data-aos-delay="100" onmousemove="handleParallax(event)" onmouseleave="resetParallax(event)">
+      <img src="./media/_ (5).jpeg" alt="Luxury Look" class="parallax-img absolute inset-0 w-full h-full object-cover transition-transform duration-200 ease-out" />
+    </div>
+
+    <!-- Image 6 -->
+    <div class="relative group overflow-hidden rounded-lg shadow-lg h-60" data-aos="fade-up" data-aos-delay="200" onmousemove="handleParallax(event)" onmouseleave="resetParallax(event)">
+      <img src="./media/Portrait Photography in Natural Light.jpeg" alt="Modern Fashion" class="parallax-img absolute inset-0 w-full h-full object-cover transition-transform duration-200 ease-out" />
+    </div>
+
+  </div>
+</section>
+
+
+
 
     <!-- Newsletter Signup -->
     <section class="py-16 px-4 max-w-7xl mx-auto text-center" data-aos="fade-up">
-      <h3 class="text-3xl font-bold mb-6 text-indigo-600">Stay Updated!</h3>
+      <h3 class="text-3xl font-bold mb-6 text-black">Stay Updated!</h3>
       <p class="mb-6 text-gray-700 max-w-xl mx-auto">Subscribe to our newsletter for the latest deals, product launches, and exclusive offers.</p>
       <form class="max-w-md mx-auto flex flex-col sm:flex-row gap-4">
         <input
